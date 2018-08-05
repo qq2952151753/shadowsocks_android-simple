@@ -102,5 +102,19 @@ Brother version
 
 [Apache License](./LICENSE)
 
+备注：看了好多shadowscoks-android,都特么写的太复杂了。包括原创作者的好像，没怎么看。其他人的都很复杂，这个是最简单的，而且是纯Java的， 关键是开始好久没弄明白，这个格式。  比如：作者留下的输入格式：
 
+ss://method:password@host:port
+ss://base64encode(method:password@host:port)
 
+其中代码保留了SmartProxy对http代理的支持, 使用时将配置链接填写标准http代理格式即可. http代理格式
+
+http://(username:passsword)@host:port
+
+ 到底是什么意思呢？该填什么？  ss://method:password@host:port         这一句的意思就是，你手工输入ss://加密方法：密码@主机IP：端口，就这么简单。      那么，ss://base64encode(method:password@host:port)这一句呢？  这一句的意思就是：你输入 ss:// base64加密过的那一长串字符串就完了。   也就是你扫码二维码得到的那么一大串。      作者这么写的意思就是： ss://解密这个括号(method:password@host:port)内得到的数值。  所以也就是那一长串BASE64编码字符串
+ 
+ http://(username:passsword)@host:port  这个格式，应该就是直接的了， 但是没有测试， 因为我没有那个代理IP去测。       
+ 
+ 
+ 这个项目是可以用滴。是O几把K滴。
+ 
